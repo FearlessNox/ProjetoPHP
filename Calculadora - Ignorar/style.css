@@ -1,0 +1,112 @@
+/* style.css */
+
+/* Definindo variáveis de cor */
+:root {
+    --color-black: #000;
+    --color-cyan: #00ffff;
+    --color-blue: #2155af;
+    --color-white: #ffffff;
+}
+
+/* Reset básico */
+body, h1, button, input {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/* Estilo do corpo */
+body {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilo do main */
+main {
+    background: rgba(25, 25, 25, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px var(--color-blue);
+}
+
+/* Estilo do header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+/* Estilo do input */
+#mathOperation{
+    width: 95%;
+    padding: 10px;
+    border: 2px solid var(--color-blue);
+    border-radius: 5px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-size: 1.5rem;
+}
+
+/* Estilo dos botões */
+button {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 5px;
+    font-size: 1.5rem;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--color-cyan);
+}
+
+/* Estilo das teclas */
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+/* Estilo da seção do resultado */
+section {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Input do resultado */
+#result {
+    width: 70%;
+    padding: 10px;
+    border: 2px solid var(--color-blue);
+    border-radius: 5px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-size: 1.5rem;
+}

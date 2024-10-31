@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const sistema = require("node:readline")
+        console.log(" - " + sistema.platform() + "\n - " +  sistema.arch() + "\n - ")
+
+        const rede = sistema.networkInterfaces()
+
+        console.log(rede)
+    </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+#container-img{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto; 
+    min-width: 55%; 
+    min-height: 100%;
+    background-color: black;
+    float: left;
+}
+
+#container-img img {
+    height: auto; 
+    width: auto; 
+    max-width: 500px; 
+    max-height: 500px;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.167), rgba(152, 152, 152, 0.105), black);
+    border-radius: 40px;
+}
+
+#container-login {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    width: auto; 
+    min-width: 45%; 
+    height: 100vh;
+    
+}
+
+#container-login-h1{
+    color: white;
+    font-size: 65px;
+    margin: 0 0 30px;
+    font-family: 'Quicksand';
+}
+
+#container-login-h2{
+    color: white;
+    font-size: 35px;
+    height: 30px;
+    font-family: Roboto;
+}
+
+#container-login-form{
+    min-height: 150px;
+    min-width: 25vw;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-image: radial-gradient(circle, rgb(49, 49, 49), rgba(52, 52, 52, 0.105), black);
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.error{
+    background-color: rgb(255, 0, 0);
+}
+
+.form-input{
+    border-radius: 5px;
+    background-color: black;
+    border: 1px white solid;
+    min-width: 25vw;
+    min-height: 5vh;
+    padding: 10px;
+    font-size: large;
+    margin: 10px 0;
+    color: white;
+    font-family: 'Mulish';
+}
+
+
+
+#container-login-form h3{
+    font-size: 30px;
+    margin: 0 0 30px;
+    font-family: 'Quicksand';
+}
+
+#submit-btn{
+    color: white;
+    width: 20vw;
+    border: 1px lightskyblue solid;
+    min-height: 5vh;
+    background-image: radial-gradient(circle, rgb(0, 157, 255), rgb(255, 255, 255));
+    cursor: pointer;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 20px;
+    margin-top: 30px;
+    font-family: 'Mulish';
+}
+
+.user-desc{
+    text-align: start;
+}
+
+.user-error{
+    background-color: red;
+    width: 100%;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+.user-sucess{
+    width: 100%;
+    background-color: rgb(110, 255, 110);
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bolder;
+}
