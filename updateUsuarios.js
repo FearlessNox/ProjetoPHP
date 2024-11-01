@@ -16,7 +16,7 @@ function verificarSenha(userPassword){
         !userPassword.match(/[a-z]{1,}/) ||
         !userPassword.match(/[A-Z]{1,}/) ||
         !userPassword.match(/[1-9]{1,}/) ||
-        !userPassword.match(/.{6,}/)
+        !userPassword.match(/.{8,}/)
     ){
         let erro = new Error("Senha não atende os requisitos")
         erro.input = "Password"

@@ -113,12 +113,26 @@
         <?php
         while($row = $resultado->fetch_assoc()){
         ?>
-            <tr><form method="post" action="update.php">
-                <td><label for="<?=$row['email'];?>">Email:   </label><input type="text" name="email" value="<?=$row['email'];?>"></td>
-                <td><label for="<?=$row['firstName'];?>">Nome: </label><input type="text" name="firstName" value="<?=$row['firstName'];?>"></td>
-                <td><label for="<?=$row['lastName'];?>">Nome: </label><input type="text" name="lastName" value="<?=$row['lastName'];?>"></td>
-                <td><label for="<?=$row['password'];?>">Senha: </label><input type="text" name="password" value="<?=$row['password'];?>"></td>
-                <td><input type="submit" value="alterar"></td>
+            <tr>
+                <form method="post" action="update.php" id="form-<?=$row['id']?>">
+                <td>
+                    <label for="<?=$row['email'];?>">Email: </label>
+                    <input type="text" name="email" value="<?=$row['email'];?>" id="form-email-<?=$row['id']?>">
+                </td>
+                <td>
+                    <label for="<?=$row['firstName'];?>">Primeiro-Nome: </label>
+                    <input type="text" name="firstName" value="<?=$row['firstName'];?>" id="form-firstName-<?=$row['id']?>">
+                </td>
+                <td>
+                    <label for="<?=$row['lastName'];?> ">Sobre-Nome: </label>
+                    <input type="text" name="lastName" value="<?=$row['lastName'];?>" id="form-lastName-<?=$row['id']?>">
+                </td>
+                <td>
+                    <label for="<?=$row['password'];?> ">Senha: </label>
+                    <input type="text" name="password" value="<?=$row['password'];?>" id="form-password-<?=$row['id']?>">
+                </td>
+                <td>
+                    <input type="submit" value="alterar" id="form-submi-<?=$row['id']?>></td> // Adicionar a analise de regex, para pegar o número do index, depois dos dois '-'
             </form>
         </tr>
         <?php

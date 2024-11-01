@@ -24,7 +24,7 @@
                 header('Location: main.php');
             }
         } else {
-            echo "Senha incorreta";
+            echo "Faz o L";
         }
     }
 ?>
