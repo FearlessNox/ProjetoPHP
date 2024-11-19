@@ -11,19 +11,26 @@ function verificarEmail(userEmail){
     }
 }
 
+function gerarErroSenha(politica){
+    let erro = new Error(politica)
+    erro.input = "Password"
+    return erro
+}
+
 function verificarSenha(userPassword){
-    if(
-        !userPassword.match(/[a-z]{1,}/) ||
-        !userPassword.match(/[A-Z]{1,}/) ||
-        !userPassword.match(/[1-9]{1,}/) ||
-        !userPassword.match(/.{6,}/)
-    ){
-        let erro = new Error("Senha não atende os requisitos")
-        erro.input = "Password"
-        throw erro
-    } else {
-        
+    if(!userPassword.match(/[a-z]{1,}/)){
+        throw gerarErroSenha("A senha deve ter caracter minúsculo")
     }
+    if(!userPassword.match(/[A-Z]{1,}/)){
+        throw gerarErroSenha("A senha deve ter caracter Maiúsculo")
+    }
+    if(!userPassword.match(/[1-9]{1,}/)){
+        throw gerarErroSenha("A senha deve ter numerico")
+    }
+    if(!userPassword.match(/.{6,}/)){
+        throw gerarErroSenha("A senha deve ter no minimo 6 letras")
+    }
+
 }
 
 let user = {}
@@ -54,6 +61,6 @@ document.getElementById("container-login-form").addEventListener('submit', ev =>
         console.log(error)
         const errorId = (`user-${(error.input).toLowerCase()}`)
         document.getElementById(`${errorId}-desc`).classList.add('user-error')
-        document.getElementById(`${errorId}-desc`).innerText = `${error.input} não de acordo com a política`
+        document.getElementById(`${errorId}-desc`).innerText = `${error.message}`
     }
 })

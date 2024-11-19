@@ -21,7 +21,7 @@
                 $_SESSION['email'] = $email;
                 $_SESSION['firstName'] = $row['firstName'];
                 $_SESSION['lastName'] = $row['lastName'];
-                header('Location: main.php');
+                header('Location: ./user-main/main.php');
             }
         } else {
             echo "Faz o L";

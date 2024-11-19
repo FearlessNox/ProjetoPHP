@@ -1,0 +1,155 @@
+/* Estilo geral da página */
+body {
+    background-color: #181818; /* Fundo escuro */
+    color: #fff; /* Texto branco */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centralizar conteúdo horizontalmente */
+    align-items: center; /* Centralizar conteúdo verticalmente */
+    height: 100vh; /* Altura da tela inteira */
+}
+
+/* Container para centralizar todo o conteúdo */
+.container {
+    text-align: center; /* Alinhar os textos ao centro */
+    max-width: 1200px;
+    padding: 20px;
+    background-color: #2d2d2d; /* Cor de fundo para a área do conteúdo */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Títulos */
+h1 {
+    margin-top: 110px;
+    color: #00bcd4; /* Azul ciano */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 10px;
+}
+
+a {
+    color: #00bcd4;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo da tabela */
+.table-container {
+    overflow-x: auto; /* Adiciona rolagem se a tabela for muito larga */
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+table td {
+    padding: 10px;
+    border: 1px solid #333;
+    text-align: left;
+}
+
+table tr {
+    height: 150px;
+}
+
+table tr:nth-child(even) {
+    background-color: #222; /* Linhas alternadas */
+}
+
+table tr:hover {
+    background-color: #333; /* Efeito ao passar o mouse */
+}
+
+/* Estilo dos inputs */
+input[type="text"] {
+    width: 80%;
+    padding: 10px; /* Aumenta o preenchimento interno dos inputs */
+    margin: 5px 0 10px; /* Adiciona margem inferior de 10px para separar dos elementos seguintes */
+    background-color: #333;
+    border: 1px solid #444;
+    color: #fff;
+    font-size: 1em;
+    border-radius: 4px;
+}
+
+input[type="text"]:focus {
+    border-color: #00bcd4; /* Destacar o campo ao focar */
+    outline: none;
+}
+
+/* Estilo do botão de submit */
+.form-button-submit {
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.form-button-submit:hover {
+    background-color: #0097a7; /* Azul mais escuro ao passar o mouse */
+}
+
+/* Estilo das mensagens de erro/descritivas */
+p {
+    font-size: 0.9em;
+    margin: 5px 0;
+    padding: 5px;
+    display: inline-block; /* Garante que a mensagem não sobreponha o input */
+}
+
+/* Estilo específico para mensagens de sucesso e erro */
+.user-sucess {
+    color: #4CAF50; /* Verde para sucesso */
+    background-color: #333; /* Fundo escuro */
+    border: 1px solid #4CAF50; /* Bordas verdes */
+    border-radius: 4px;
+}
+
+.user-error {
+    color: #f44336; /* Vermelho para erro */
+    background-color: #333; /* Fundo escuro */
+    border: 1px solid #f44336; /* Bordas vermelhas */
+    border-radius: 4px;
+}
+
+/* Melhorar a apresentação do form */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Centraliza os campos de formulário */
+}
+
+form td {
+    width: 20%; /* Ajustar a largura das células da tabela */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    form td {
+        width: 100%;
+    }
+
+    table {
+        font-size: 0.9em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+}

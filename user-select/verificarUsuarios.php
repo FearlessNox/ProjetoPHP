@@ -1,5 +1,5 @@
 <?php
-    include('valida.php');
+    include('../user-validate/valida.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -108,12 +108,12 @@
     <h1>Usuários cadastrados</h1>
 
     <div class="back-button">
-        <a href="main.php">Voltar</a>
+        <a href="../user-main/main.php">Voltar</a>
     </div>
 
     <div class="user-grid">
         <?php
-            include('conexao.php');
+            include('../conexao.php');
 
             $sql = 'SELECT * FROM USERS';
 
